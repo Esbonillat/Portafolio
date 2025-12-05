@@ -11,14 +11,9 @@
 /* --- Estilo para el BODY------------*/
 body {
 
-    background-color: #1e1e1e;
+    background-color: #141414;
     /* Aplica el degradado lineal */
-    background-image: linear-gradient(
-        to bottom, 
-        #1e1e1e 10%,         /* Empieza en el color oscuro base */
-        #1e1e1e 80%,        /* Mantiene el color oscuro base hasta el 90% de la altura */
-        #1e1e1e 100%        /* Transiciona a blanco en el 100% (la parte inferior) */
-    );
+
     /* Asegura que el fondo cubra toda la altura */
     min-height: 100vh;
     margin: 0;
@@ -169,7 +164,7 @@ body {
     position: absolute;
     width: 440px;
     height: 35px;
-    background-color: var(--color-fondo);
+    background-color: #141414;
     border-radius: 10%;
 
 }
