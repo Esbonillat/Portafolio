@@ -1,0 +1,524 @@
+
+/* VARIABLES DE CSS */
+:root {
+    --color-fondo: #1e1e1e;
+    --color-texto: #ffffff;
+    --color-secundario: #252526;
+    --color-rojo:#a55757;
+    --color-cajas:#585858;
+}
+
+/* --- Estilo para el BODY------------*/
+body {
+
+    background-color: #1e1e1e;
+    /* Aplica el degradado lineal */
+    background-image: linear-gradient(
+        to bottom, 
+        #1e1e1e 10%,         /* Empieza en el color oscuro base */
+        #1e1e1e 80%,        /* Mantiene el color oscuro base hasta el 90% de la altura */
+        #1e1e1e 100%        /* Transiciona a blanco en el 100% (la parte inferior) */
+    );
+    /* Asegura que el fondo cubra toda la altura */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Espacio alrededor del contenido */
+    font-family: "Roboto", sans-serif;
+    padding-top: 0;
+    color: var(--color-texto);
+    
+}
+
+/* --- Estilo para el HEAD------------*/
+.content_head {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+.proyec_nav{
+    width: 40%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.title3{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    font-size: 22px;
+    margin: 1px;
+    color: rgb(255, 255, 255);
+    border: 3px  ;
+    transition:
+    border 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.img_icon{
+    width: 2pc;
+    height: 2pc;
+    border: 1px;
+    border-radius: 10px;
+    margin: 7px;
+    box-shadow: 0 0 5px rgb(170, 0, 0),
+    0 0 10px red;
+    transition:
+    border 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+    
+}
+/* --- Estilo HOVER DEL HEAD------------*/
+.title3:hover{
+    border: 6px  ;
+    text-shadow:
+    0 0 10px red, /* Más dispersión */
+    0 0 20px red, /* Más dispersión */
+    0 0 30px red; /* Una tercera capa para un brillo más intenso */
+    transform: scale(1.14);
+    cursor: pointer;
+    
+}
+#name_title{
+    width: 60%;
+
+}
+/* ------Efecto de escritura Head------------*/
+#nombre-escrito {
+    color: var(--color-rojo);
+    /* Define el borde derecho como el cursor */
+    border-right: 3px solid #fdf9f9; /* Color y grosor del cursor */
+    /* Asegura que el elemento sea un contenedor de texto */
+    white-space: nowrap; 
+    /* Oculta el desbordamiento de texto si lo hubiera */
+    overflow: hidden; 
+    /* Aplica la animación al span */
+    animation: parpadeo 0.75s step-end infinite;
+}
+
+/* Animación para hacer que el cursor parpadee */
+@keyframes parpadeo {
+    from, to { border-color: transparent }
+    50% { border-color: #a55757 /* El color del cursor */}
+}
+
+/* ------Estilos main------------*/
+
+.principal_container{
+    width: 100%;
+    
+    display: flex;   
+}
+/* ==============================Estilos de la parte Izquierda ================================ */
+.modele1{
+    width: 33%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    position: fixed;
+}
+
+/* --- Contenedor Principal (Flexbox) --- */
+.contactos-flex {
+  /* Habilita Flexbox */
+  display: flex; 
+  /* Permite que los elementos pasen a la siguiente línea si no caben */
+  flex-wrap: wrap; 
+  /* Distribuye los elementos uniformemente y añade espacio entre ellos */
+  justify-content: space-around; 
+  gap: 20px;
+  padding: 20px;
+}
+
+/* --- Estilos de los Bloques Individuales --- */
+.contacto-bloque {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 450px; 
+  padding: 30px;
+  height: 45px;
+  margin: 40px;
+  border-radius: 10%;
+  padding: 0px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+/* --- EFECTO DE BORDE EN LOS BLOQUES DE CONTACTO --- */
+.contacto-bloque::before{
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 440px;
+    background-image: conic-gradient(rgb(105, 139, 212) 50deg, transparent 120deg);
+    animation: rotar 10s linear infinite;
+    margin: 10px;
+}
+.contacto-bloque::after{
+    content: "";
+    position: absolute;
+    width: 440px;
+    height: 35px;
+    background-color: var(--color-fondo);
+    border-radius: 10%;
+
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.img_prin{
+    width: 15pc;
+    height: 11pc;
+    border:0px solid var(--color-fondo);
+    border-radius: 100%;
+    box-shadow: 0 0 20px rgb(129, 129, 129),
+        0 0 10px rgb(170, 0, 0);
+        transition:
+        border 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+    z-index: 2;
+}
+.img_prin:hover{
+        border: 6px  ;
+    transform: scale(1.14);
+    cursor: pointer;
+    z-index: 2;
+}
+.img_icon_p{
+    border: 1px solid var(--color-texto);
+    border-radius: 100%;
+    width: 30px;
+    overflow: hidden;
+    object-fit: cover;
+    display: block; /* La convierte en un elemento de bloque */
+  margin-left: 10px;
+  margin-right: auto;
+  z-index: 2;
+}
+.concat{
+    background-color: var(--color-cajas);
+    width: 25pc;
+    height: 2,5pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 2;
+    
+}
+
+/* Estilos de los Iconos */
+.contacto-bloque i {
+  font-size: 3em;
+  color: #1aa393; 
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+/* Estilos del Botón de Copiar/Descargar */
+.btn-copiar {
+  background-color: var(--color-secundario);
+  color: white;
+  border: 1px solid var(--color-texto);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
+  text-decoration: none; 
+  display: inline-block;
+  z-index: 2;
+}
+
+.btn-copiar:hover {
+  background-color: var(--color-cajas);
+  border: 2px solid var(--color-texto);
+          transition:
+        border 0.1s ease-in-out,
+        text-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+        z-index: 2;
+}
+.contac_title{
+    font-size: 25px;
+    z-index: 2;
+}
+#whatsapp-info{
+    color:var(--color-texto);
+    z-index: 2;
+}
+.icon_gen{
+    
+    width: 3pc;
+    border-radius: 100%;
+    z-index: 2;
+}
+text_cor{
+    color: var(--color-rojo);
+    
+}
+.contac_title_c{
+    font-size: 25px;
+    color: var(--color-rojo);
+    z-index: 2;
+    
+}
+.text_ho{
+    color: #2261be;
+    font-size: 25px;
+    z-index: 2;
+}
+#correo-info{
+    z-index: 2;
+}
+#ciudad-info{
+    z-index: 2;
+}
+.text_ciu{
+    z-index: 2;
+    font-size: 25px;
+}
+/* ---------------------Estilos del bloque de la parte derecha -----------------------*/
+.modele2 {
+    width: 100%;
+    height: auto;
+    margin: 100px;
+    margin-left: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.description_b{
+    color: rgb(168, 255, 255);
+    font-weight: bold;
+}
+.descrition_b2{
+    color: rgb(194, 168, 255);
+    font-weight: bold;
+}
+.content_prin{
+    width: 35pc;
+   
+    
+}
+.descrition_s{
+    color: rgb(238, 168, 255);
+    font-weight: bold;
+}
+
+.img_h{
+    width: 45px;
+    margin: 0;
+    height: 45px;
+    border-radius: 10px;
+    margin: 1px;
+    border: 3px;
+    transition: 
+        border 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+        display: inline-block;
+    ;
+}
+.img_h:hover{
+    border: 3px ;
+    transform: scale(1.14);
+    
+
+}
+.content_prin_h{
+    width: 35pc;
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+.habil_p{
+        width: 100px;
+    height: 100px;
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#habilidade{
+    color: rgb(238, 168, 255);
+}
+#sobre_m{
+    color: rgb(168, 255, 194);
+}
+#proyectos{
+    color: rgb(255, 168, 168);
+}
+
+/* ====================================== Estilos de carrusel de imagenes==================== */
+/* 1. Contenedor principal: define el área visible */
+.carousel-container {
+    width: 70%; 
+    max-width: 380px;
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: relative; 
+    padding-bottom: 10.25%; /* Para una relación de aspecto  */
+    border-radius: 10%;
+}
+
+/* 2. Pista de las imágenes: el elemento que se moverá */
+.carousel-track {
+    /* CRÍTICO: Usa flexbox para alinear todas las imágenes horizontalmente */
+    display: flex; 
+    
+    /* Agrega una transición suave para la animación de deslizamiento */
+    transition: transform 0.3s ease-in-out; 
+    
+    /* Asegura que no haya saltos de línea y que todo permanezca en una sola fila */
+    white-space: nowrap;
+}
+
+/* 3. Cada diapositiva: la unidad de contenido individual */
+.slide {
+    /* CRÍTICO: Fuerza a cada slide a ocupar exactamente el ancho del .carousel-container */
+    min-width: 380px; 
+    height: 200px;
+      
+    /* CRÍTICO: Impide que los slides se encojan cuando el .carousel-track se hace más grande */
+    flex-shrink: 0; 
+    overflow: hidden;
+    /* Opcional: Asegura que el contenido interno se ajuste */
+    box-sizing: border-box; 
+}
+
+/* 4. Imágenes */
+.slide img {
+    /* Asegura que la imagen ocupe el 100% del espacio de su slide */
+    width: 380px;
+    height: auto;
+    object-fit: contain;
+    display: block; /* Elimina espacios extra debajo de las imágenes */
+}
+
+/* 5. Estilos de Botones (Opcional, pero necesario para usarlos) */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Estilos visuales */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10; /* Asegura que estén por encima de las imágenes */
+    transition: background 0.2s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Estilo para botones deshabilitados (manejo en JS) */
+.prev-button:disabled, .next-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.Experence_button{
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-texto);
+    border-radius: 10%;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    text-decoration: none;
+}
+.conten_button_E{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------ADAPTACION A MOVIL------------------------------------ */
+/*regla media */
+@media screen and (max-width: 768px){
+.content_head{
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        margin-top: 30px;
+        align-items: baseline;
+        margin-left: 0px;
+}
+.proyec_nav{
+    display: none;
+}
+.principal_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+#name_title{
+
+    font-size: 20px;
+}
+.modele1{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    padding-left: 130px;
+}
+.modele2{
+        display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    padding-left: 130px;
+}
+}
