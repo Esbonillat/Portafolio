@@ -500,12 +500,12 @@ text_cor{
 }
 .modele1{
     display: flex;
-    
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5%;
-    padding-left: 130px;
+    padding-left: 50px;
 }
 .modele2{
         display: flex;
